@@ -1,20 +1,18 @@
 class GamesController < ApplicationController
 
     def index
-        games = Game.all
-        render json: games
+        render json: Game.all
     end
 
     def show
-        game = Game.find(params[:id])
-        render json: game
+        game = findGame
+        render json: game, serializer: GameWithCommentsSerializer
     end
 
-    def destroy
-        game = Game.find(params[:id])
-        game.destroy
-    end
+private
 
-  
+    def findGame
+        Game.find(params[:id])
+    end
 
 end

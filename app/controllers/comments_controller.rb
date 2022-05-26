@@ -1,22 +1,21 @@
 class CommentsController < ApplicationController
-    # before_action :comment_find, only: [:edit, :update, :destroy]
-    # before_action :authorize_comment, only: [:update, :edit, :destroy]
+    # before_action :authenticate_user, except: [:show, :index]
+    before_action :comment_find, only: [:show, :edit, :update, :destroy]
+    before_action :authorize_comment, only: [:update, :edit, :destroy]
 
     def index
-        comments = Comment.all
-        render json: comments
-    end
-
-    def show
-        comment = Comment.find(params[:id])
-        render json: comment
+        render json: Comment.all
     end
 
     def create
         # byebug
-        current_user = User.find(session[:current_user])
-        @comment = current_user.comments.create!(comment_params)
-        render json: @comment, status: :created
+        @comment = @current_user.comments.create!(comment_params)
+        render json: comments, status: :created
+    end
+
+    def show
+        #comment = comment_find
+        render json: @comment
     end
 
     def update
@@ -32,8 +31,12 @@ class CommentsController < ApplicationController
 
     private
 
+    def comment_find
+        @comment = Comment.find(params[:id])
+    end
+
     def comment_params
-        params.require(:comment).permit(:content, :game_id, :user_id)
+        params.permit(:content, :game_id, :user_id)
     end
 
     # def correct_user

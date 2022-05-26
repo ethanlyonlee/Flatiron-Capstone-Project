@@ -1,45 +1,28 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
-import GameComments from "./GameComments";
-import {useState, useEffect} from "react"
-import CommentForm from './CommentForm'
+// import Navbar from "./Navbar";
 
-function GameCard({ key, id, name, image, venue, date, time, comments_game }) {
-  const [comments, setComments] = useState([false]);
-  
-  function handleFeedback(event) {
-    event.preventDefault();
-    setComments(!comments);
+function GameCard({key, id, name, image, date, time, venue}) {
+   
+    return (
+      <>
+      {/* <Navbar /> */}
+      <section className="container">
+          <div key={key} class="con-card">
+            <img class="img-single" src={image} alt={name} />
+            <h2 class="title">{name}</h2>
+                  <div class="con">
+                    <p>Date: {date}</p>
+                    <p>Time: {time}</p>
+                    <p>Venue: {venue}</p>
+                    <Link to={`/games/${id}`}><button class="button-85">See More</button></Link><br></br>
+                    <Link to={`/comments`}><button button class="button-85">Comment</button></Link>
+                  </div>
+          </div>
+         
+      </section>
+      </>
+    );
   }
-  console.log(id)
-
   
-  // const gameComments = <GameComments id={id} allGameComments={comments_game}/>
-
-
-  return (
-    <>
-    <section className="container">
-        <div key={key} class="con-card">
-          <img class="img-single" src={image} alt={name} />
-          <h2 class="title">{name}</h2>
-                <div class="con">
-                  <p>Date: {date}</p>
-                  <p>Time: {time}</p>
-                  <p>Venue: {venue}</p>
-                  <Link to={`/tickets`}><button class="button-85">Buy tickets</button></Link><br></br>
-                  <button onClick={handleFeedback}>Feedback</button>
-                  {/* {comments? gameComments : null} */}
-                  <GameComments id={id} allGameComments={comments_game}/>
-                  {/* <Link to={`/comments`}><button class="button-85">Your thoughts</button></Link><br></br> */}
-
-                </div>
-                {/* <CommentForm game_id={id} /> */}
-        </div>
-    </section>
-    </>
-  );
-}
-
-export default GameCard;
-
+  export default GameCard;

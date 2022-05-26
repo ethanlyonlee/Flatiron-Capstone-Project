@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import SearchItem from "./SearchItem";
 import ItemList from "./ItemList";
 
-function Item({renderItems}) {
+function Item(renderItems) {
     const [items, setItems] = useState([]);
     const [query, setQuery] = useState("");
     const [search, setSearch] = useState(false);

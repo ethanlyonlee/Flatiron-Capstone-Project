@@ -3,9 +3,8 @@ import {useNavigate} from 'react-router-dom';
 
 function Ticket({addComment, setCommentData}) {
     const [rating, setRating] = useState();
-    const [content, setContent] = useState();
-    const [user_id, setUser_Id] = useState();
-    const [concert_id, setConcert_Id] = useState();
+    // const [user_id, setUser_Id] = useState();
+    const [game_id, setGame_Id] = useState();
     const [formErrors, setFormErrors] = useState([]);
     let navigate = useNavigate();
 
@@ -24,17 +23,17 @@ function Ticket({addComment, setCommentData}) {
         className="editForm"
       >
         <fieldset className="newCommentFieldset">
-            <label class="form-label" htmlFor="concert_id">
+            <label class="form-label" htmlFor="game_id">
             Game:
             </label>
             <br></br>
             <select
             type="dropdown"
             className="dropdown"
-            name="concert_id"
-            id="concert_id"
-            value={concert_id}
-            onChange={(e) => setConcert_Id(e.target.value)}
+            name="game_id"
+            id="game_id"
+            value={game_id}
+            onChange={(e) => setGame_Id(e.target.value)}
             >
             <option>Select a Game</option> 
             <option value= "1">Chicago Bulls @ Golden State Warriors</option>
@@ -82,7 +81,6 @@ function Ticket({addComment, setCommentData}) {
       </form>
     </>
   );
-    
 }
 
 export default Ticket;
