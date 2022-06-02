@@ -24,7 +24,7 @@ function TeamPage() {
     const renderGames = teamGames.map(game => <TeamPageShow key={game.id} game={game}/>)
 
     return(
-        <div className='background'>
+        <div className='background' id="team-page-box">
             <div className='team-page'>
                 <img src={team.image_url} alt={`${team.name}`}></img>
                 <h1>{team.name}</h1>

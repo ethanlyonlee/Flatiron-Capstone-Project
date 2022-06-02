@@ -1,3 +1,11 @@
+#team-page-box {
+    height:80.7vh;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 10px
+}
+
 .team-page {
     margin: 20px 20px  0;  
     border: 5px solid #333;

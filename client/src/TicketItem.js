@@ -20,12 +20,14 @@ function TicketItem({game, ticketCount, user}) {
         .then(res => res.json())
         .then(boughtTicket => {setNumTickets(numTickets+1)
             console.log(boughtTicket)})
+        window.confirm("Thank you for adding tickets!")
     }
     
   function handleDelete(e) {
         fetch(`/games/${game.id}`,{
             method:"DELETE"
         }).then(() => setNumTickets(numTickets-1))
+        window.confirm("Successfully removed!")
     }
 
     return(

@@ -13,11 +13,15 @@ function CommentItem({id, game, content, username, deleteComment}) {
             </div>
 
             <div className="comment-item">
-                <button onClick={() => deleteComment(id)}>Delete Comment</button>
-                <br></br>
                 <Link to={`/comments/${id}/edit`}>
                     <button>Edit Comment</button>
                 </Link>
+                <br></br>
+                <button onClick={() => deleteComment(id)}>Delete</button>
+                {/* <br></br>
+                <Link to={`/comments/${id}/edit`}>
+                    <button>Edit Comment</button>
+                </Link> */}
             </div>
         </section>
     );

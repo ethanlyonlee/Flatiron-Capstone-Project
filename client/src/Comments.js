@@ -1,12 +1,12 @@
 // import {useEffect, useState} from 'react'
-import { useHistory, useLocation, useRouteMatch } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 import CommentItem from './CommentItem';
 import CommentNewForm from './CommentNewForm';
 import './Comments.css'
 
 function Comments({commentData, setCommentData, userId, addComment}) {
-    const history = useHistory();
-    const location = useLocation();
+    // const history = useHistory();
+    // const location = useLocation();
     const match = useRouteMatch();
 
     function deleteComment(id) {

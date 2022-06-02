@@ -63,7 +63,7 @@ function Profile({user, setUser, setIsAuthenticated}) {
             {/* <h1>{user.first_name}'s Profile:</h1> */}
             {/* <h1>{user.first_name}'s Profile'</h1> */}
             <h3 id="profile-name">{user.first_name} {user.last_name}'s Profile</h3>
-            <h3 id="profile-name">Username: {user.username}</h3>
+            {/* <h3 id="profile-name">Username: {user.username}</h3> */}
             <button onClick={handleEditToggle}>Edit Profile</button>
         </div>
     )

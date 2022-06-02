@@ -20,7 +20,7 @@
 }
 
 .ticket-buy-button:hover {
-    background-color:yellow;
+    background-color:rgb(241, 199, 10);
     cursor: pointer;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .ticket-delete-button:hover {
-    background-color: yellow;
+    background-color: rgb(241, 199, 10);
     cursor: pointer;
 }
 
