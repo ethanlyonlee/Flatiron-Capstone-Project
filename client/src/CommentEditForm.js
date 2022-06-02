@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import "./CommentEditForm.css";
 
 function CommentEditForm({ comment = {}, updateComment }) {
   const [content, setContent] = useState(comment.content);
@@ -22,56 +23,52 @@ function CommentEditForm({ comment = {}, updateComment }) {
   }, [comment])
 
   return (
-    <>
-    <h1 className="new-trip-form-title">Edit Your Comment</h1>
+    <div id="edit-form-box">
+    <h1 id="edit-h1">Edit Your Comment:</h1>
       <form
         onSubmit={handleSubmit}
-        className="editForm"
+        className="comment-item"
       >
-        <fieldset className="newCommentFieldset">
-            <label className="" htmlFor="game_id">
-           Game:
+            <label htmlFor="game_id">
+            Game:
             </label>
             <select
             type="dropdown"
-            className="dropdown"
-            name="concert_id"
-            id="concert_id"
+            name="game_id"
+            id="game_id"
             value={game}
             onChange={(e) => setGame(e.target.value)}
             >
-           <option value= "1">Chicago Bulls @ Golden State Warriors</option>
-            <option value= "2">Chicago Bulls @ Miami Heat</option>
-            <option value= "3">Chicago Bulls @ Brooklyn Nets</option>
-            <option value= "4">Chicago Bulls @ Milwaukee Bucks</option>
-            <option value= "5">Chicago Bulls @ New York Knicks</option>
+            <option value="">Select a Game</option>
+            <option value= "1">Golden State Warriors @ Chicago Bulls</option>
+            <option value= "2">Boston Celtics @ Golden State Warriors</option>
+            <option value= "3">Miami Heat @ Boston Celtics</option>
+            <option value= "4">Dallas Mavericks @ Miami Heat</option>
+            <option value= "5">Phoenix Suns @ Dallas Mavericks</option>
+            <option value= "6">Chicago Bulls @ Phoenix Suns</option> 
             </select>
-        </fieldset>
-
-
-        <fieldset className="newCommentFieldset">
-          <label className="" htmlFor="content">
+            
+          <label htmlFor="content">
             Comment:
           </label>
           <input
             type="text"
-            className="input"
             name="content"
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
-        </fieldset>
+
 
         <button
-          class="com-btn"
+            className="edit-button"
           type="submit"
         >
           Update
         </button>
         
       </form>
-    </>
+    </div>
   );
 }
 

@@ -1,13 +1,13 @@
 import React from "react";
+import "./Games.css"
 
-function SearchGame({ setQuery }) {
+function SearchGame({ setQuery, filterGames }) {
  
   return (
-    <div className="searchbar">
-      <h4> Search </h4>
-      <div class="search-box">
+    <div className="game_section">
+      <h2 id="gameTitle"> Find games </h2>
+      <div class="games-wrapper">
       <input
-        className="fas"
         type="text"
         id="search"
         placeholder=" Type a game to search..."

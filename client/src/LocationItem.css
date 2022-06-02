@@ -1,0 +1,42 @@
+.location-item{
+    background-color: rgb(39, 37, 37);
+}
+
+.location-item:hover{
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+.location-item h1 {
+    color:yellow;
+    font-size: 30px;
+    margin-top: 0px;
+    padding-top: 20px;
+    background-color: rgb(39, 37, 37);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+.location-item p {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.location-item a{
+    display: inline-block;
+    padding: 6px 8px;
+    background-color: rgb(2, 2, 45);;
+    font-weight: bold;
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.location-item a:hover {
+    background-color: rgb(241, 199, 10);   
+}
+
+.location-item img{
+        width:  800px;
+        height: 600px;
+        object-fit: cover;
+}

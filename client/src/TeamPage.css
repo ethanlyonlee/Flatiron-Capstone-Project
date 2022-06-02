@@ -1,0 +1,40 @@
+.team-page {
+    margin: 20px 20px  0;  
+    border: 5px solid #333;
+    overflow: auto;
+    background-color: #333;
+}
+  
+.team-page > img{
+    float: left;
+    height: auto;
+    width: auto;
+}
+
+.team-page > p {
+    margin-left: 350px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.team-page > h1 {
+    font-weight: bold;
+    font-size: 40px;
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.team-page >a {
+    color:yellow;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.render-game{
+    color: white;
+    text-align: left;
+    margin-left: 600px;
+    margin-right: 600px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.808);
+    text-indent: 35px;
+}

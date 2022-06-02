@@ -1,86 +1,73 @@
-import React, { useState } from "react";
-// import { button, error, input, FormField, label, textArea } from "../styles";
+import {useState} from 'react'
+import { useHistory } from 'react-router-dom'
+import './SignUp.css'
 
-function Signup({ onLogin }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+function SignUp() {
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setErrors([]);
-    setIsLoading(true);
-    fetch("/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username,
-        password,
-        password_confirmation: passwordConfirmation,
-      }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => onLogin(user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
-  }
+    const history = useHistory()
+    const [signUpParams, setSignUpParams] = useState({
+        first_name: '',
+        last_name: '',
+        username: '',
+        password: ''
+    })
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [error, setError] = useState(null) 
 
-  return (
-  
-    <div class="sign-up-form">
-      <h2 class="signup-label">If you do not have an account with us, please sign up below</h2>
-      <h1 class="signup-label"> Sign-Up Here:</h1>
-    <form  onSubmit={handleSubmit}>
-      <formField>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </formField>
-      <formField>
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          autoComplete="current-password"
-        />
-      </formField>
-      <formField>
-        <label htmlFor="password">Password Confirmation</label>
-        <input
-          type="password"
-          id="password_confirmation"
-          value={passwordConfirmation}
-          onChange={(e) => setPasswordConfirmation(e.target.value)}
-          autoComplete="current-password"
-        />
-      </formField>
-      <formField>
-        <button class="btn btn-primary btn-block btn-large" type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
-      </formField>
-      <formField>
-        {errors.map((err) => (
-          <error key={err}>{err}</error>
-        ))}
-      </formField>
-    </form>
-    <div class="btm-space"></div>
-    </div>
-  );
+    function submitHandler(e) {
+        e.preventDefault()
+
+        const configObject = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(signUpParams)
+        }
+
+        if(signUpParams.password === confirmPassword) {
+            setError(null)
+            fetch('/users', configObject)
+            .then(res => {
+                if(res.ok) {
+                    res.json()
+                    .then(() => {
+                        history.push("/Login")
+                        e.target.reset()
+                    })
+                } else {
+                    res.json()
+                    .then(json => {setError(json.error)})
+                }
+            })
+        } else {
+            setError('Passwords do not match. Please try again.')
+        }
+    }
+    return(
+        <div id="signup-box">
+            <h1 id="signup_h1">Welcome! Please Sign Up.</h1>
+                <form onSubmit={(e) => submitHandler(e)}>
+                    <div>
+                        <p id="signup2">First Name</p>
+                        <input type="text" id="firstname-signup" name='first_name'placeholder="Enter First Name" onChange={e => setSignUpParams({...signUpParams, [e.target.name]: e.target.value})} required></input>
+                        <p id="signup2">Last Name</p>
+                        <input type="text" id="lastname-signup" name='last_name'placeholder="Enter Last Name" onChange={e => setSignUpParams({...signUpParams, [e.target.name]: e.target.value})} required></input>
+                        <p id="signup2">Username</p>
+                        <input type="text" id="username-signup" name='username'placeholder="Enter Username" onChange={e => setSignUpParams({...signUpParams, [e.target.name]: e.target.value})} required></input>
+                        <p id="signup2">Password</p>
+                        <input type="password" id="password-signup" name='password'placeholder="Enter Password" onChange={e => setSignUpParams({...signUpParams, [e.target.name]: e.target.value})} required></input>
+                        <p id="signup2">Re-enter Password</p>
+                        <input type="password" id="password-signup" placeholder="Enter Password" onChange={e => setConfirmPassword(e.target.value)} required></input>
+                        <br></br>
+                        <input type="submit" id="submit-signup" value="Sign Up"></input>
+                        <br/>
+                        {error ? <p>{error}</p> : null}
+                    </div>
+                </form>
+                
+        </div>
+    )
 }
 
-export default Signup;
-      
+export default SignUp;

@@ -1,0 +1,48 @@
+.teams-list:hover{
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+.teams-list h1 {
+    color: yellow;
+    font-size:28px;
+    margin-bottom: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.teams-list p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.teams-list a{
+    display: inline-block;
+    padding: 6px 10px;
+    background-color: rgb(148, 148, 161);
+    font-weight: bold;
+    border-radius: 20px;
+    transition:0.4 ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.teams-list a:hover {
+    background-color: rgb(241, 199, 10);
+}
+
+.teams-list img{
+    max-width: 20%;
+    max-height: 20%;
+    border-radius: 50%;
+    border: 6px dashed rgb(2, 2, 45);
+    padding: 10px;
+}
+
+#teamTitle {
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

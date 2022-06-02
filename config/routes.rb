@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :comments
-  resources :games
-  resources :users
+  get '/users/:id', to: 'users#game_tickets'
+
   resources :tickets
-  resources :items
-  resources :sessions
-  
-  post "/login", to: "sessions#create"
-  post "/signup", to: "users#create"
-  get "/me", to: "users#show"
-  delete "/logout", to: "sessions#destroy"
+  resources :games
+  resources :locations
+  resources :teams
+  resources :users
+  resources :comments
+
+  get '/authorized_user', to: 'users#show'
+  post '/login', to: 'sessions#login'
+  delete '/logout', to: 'sessions#logout'
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

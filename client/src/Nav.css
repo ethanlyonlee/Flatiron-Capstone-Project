@@ -1,0 +1,68 @@
+nav {
+    height: 7vh;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr) 10fr; */
+    align-items: left;
+    text-align: left;
+    background-color: rgb(2, 2, 45);
+    padding: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    /* background-color: rgb(181, 217, 24);    */
+}
+
+#welcome {
+    color: white;
+    font-size: 20px;
+}
+
+#login {
+    justify-self: end;
+    font-style: italic;
+    color: yellow
+}
+
+#signup{
+    justify-self: end;
+    font-style: italic;
+    color: yellow
+}
+
+#logged-in {
+    justify-self: end;
+    margin-right: 10%;
+    text-align: right;
+    align-items: right;
+    color: yellow
+}
+
+#logout {
+    justify-self: end;
+    font-style: italic;
+    color: yellow
+}
+
+#or {
+    display: inline;
+    color: white;
+    font-size: 20px;
+}
+
+#logged-out {
+    justify-self: end;
+    margin-right: 10%;
+    align-items: right;
+    text-align: right;
+    color: yellow
+}

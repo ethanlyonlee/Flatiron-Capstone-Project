@@ -1,0 +1,129 @@
+.game-item {
+    color: white;
+    text-align: left;
+    margin: 5% 5% 1% 5%;
+    border: 1px white;
+    box-shadow: inset 0 0 0 1000px  rgb(2, 2, 45);
+    width: 90%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: 70%;
+}
+
+.team-name {
+    color: white;
+    font-size: 26px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-left: 14px;
+}
+
+.game_name {
+    color: yellow;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-self: center;
+    margin-left: 14px;
+    font-weight: bold;
+}
+
+.date_time {
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-self: center;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin-left: 14px;
+}
+
+.price {
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-self: center;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    margin-left: 14px;
+}
+
+.location{
+    color: white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline;
+    align-self: center;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-left: 7px;
+}
+
+.img-team{
+    max-width: 25%;
+    max-height: 25%;
+}
+
+.home-game-team-link {
+    text-decoration: underline;
+    text-decoration-color: white;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.home-game-location-link {
+    text-decoration: underline;
+    text-decoration-color: white;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+#buy-button {
+    display: inline-block;
+    margin: 0 50px 0 50px;
+    height: 50%;
+    width: 150px;
+    background-color: rgb(80, 0, 80);
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:0.4;
+}
+
+#buy-button:hover {
+    background-color:rgb(2, 2, 45);;
+    cursor: pointer;
+}
+
+.buy-bought-div {
+    grid-column-start: 2;
+    grid-row: 2 / span 2;
+}
+
+.buy-bought-div p{
+    margin-left: 17%;
+    font-size: 20px;
+}
+
+#cannot-buy-button {
+    display: inline-block;
+    height: 50%;
+    margin: 10px 20px 10px 20px;
+    background-color: rgb(4, 4, 105);;
+    color:white;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 20px;
+    transition:0.4 ;
+}
+
+#cannot-buy-button:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.cannot-buy-link {
+    grid-column-start: 2;
+    grid-row: 2 / span 2;
+}

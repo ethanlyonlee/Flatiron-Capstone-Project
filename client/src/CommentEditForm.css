@@ -1,0 +1,77 @@
+.comment-item{
+    background-color: rgb(39, 37, 37);
+    color: rgb(239, 234, 234);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+#edit-form-box{
+    height:80.7vh;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 10px
+}
+
+#edit-h1{
+    font-size: 28px;
+    color: yellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.comment-item:hover{
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+.comment-item h1 {
+    color:yellow;
+    font-size: 30px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.comment-item p {
+    color: white;
+    font-size:18px;
+    margin-bottom: 16px;
+}
+
+.comment-item a{
+    display: inline-block;
+    padding: 12px 16px;
+    /* background-color: rgb(80, 0, 80); */
+    color:rgb(0, 0, 0);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:0.4 ;
+}
+
+/* .comment-item a:hover {
+    background-color: rgb(2, 2, 45);
+} */
+
+/* .comment-item img{
+        width:  800px;
+        height: 600px;
+        object-fit: cover;
+} */
+
+#edit-button {
+    display: inline-block;
+    margin: 0 50px 0 50px;
+    height: 50%;
+    width: 150px;
+    background-color: rgb(80, 0, 80);
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:0.4; 
+}
+
+#edit-button:hover {
+    background-color:rgb(2, 2, 45);;
+    cursor: pointer;
+}

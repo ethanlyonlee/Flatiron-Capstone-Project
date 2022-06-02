@@ -1,0 +1,50 @@
+.comment-item{
+    background-color: rgb(39, 37, 37);
+    color: yellow;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.comment-item:hover{
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+.comment-item h1 {
+    color:yellow;
+    font-size:28px;
+    margin-top: 0px;
+    padding-top: 20px;
+    background-color: rgb(39, 37, 37)
+}
+
+.comment-item p {
+    color: #ffffff;
+    font-size:18px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+/* .comment-item p:hover {
+    background-color: rgb(2, 2, 45);  
+} */
+
+.comment-item a{
+    display: inline-block;
+    padding: 12px 16px;
+    color:rgb(0, 0, 0);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:0.4 ;
+}
+
+/* .comment-item a:hover {
+    background-color: rgb(2, 2, 45);  
+} */
+
+.comment-item img{
+        width:  800px;
+        height: 600px;
+        object-fit: cover;
+}

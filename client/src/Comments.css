@@ -1,0 +1,14 @@
+#comments-page-title{
+    background-color: black;
+    margin: 0;
+    padding-bottom: 10px;
+    color:white;
+    font-size: 0px;
+    /* text-decoration: underline; */
+}
+
+#fans-voices{
+    font-size: 30px;
+    color: yellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
