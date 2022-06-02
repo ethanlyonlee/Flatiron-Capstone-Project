@@ -9,12 +9,13 @@ function CommentEditForm({ comment = {}, updateComment }) {
   const {id} = useParams();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     updateComment(id, {
       content,
       game,
     });
+    window.confirm("Your comment has been updated!")
   };
 
   useEffect(() => {
@@ -57,6 +58,7 @@ function CommentEditForm({ comment = {}, updateComment }) {
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
+            required
           />
 
 

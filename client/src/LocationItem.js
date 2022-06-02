@@ -9,9 +9,10 @@ function LocationItem({location}) {
             <h1>{name}</h1>
             <p>Location: {city}, {state}</p>
             <p>Capacity: {number_of_seats}</p>
-            <img src={image_url} alt={name}></img>
-            <br></br>
             <Link to={`/Locations/${id}`}><p>More Info</p></Link>
+            <img src={image_url} alt={name}></img>
+            {/* <br></br>
+            <Link to={`/Locations/${id}`}><p>More Info</p></Link> */}
         </div>
     )
 }

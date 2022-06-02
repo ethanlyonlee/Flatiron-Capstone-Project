@@ -12,17 +12,23 @@
     color: white;
     text-align: center;
     align-items: center;
-    padding: 10px
+    padding: 10px;
+    
 }
 
 #edit-h1{
-    font-size: 28px;
-    color: yellow;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border-bottom: 1px solid white;
+        background-color: black;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 40px;
+        color: yellow;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .comment-item:hover{
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 6px rgba(244, 239, 239, 0.2);
 }
 .comment-item h1 {
     color:yellow;
@@ -33,7 +39,7 @@
 
 .comment-item p {
     color: white;
-    font-size:18px;
+    font-size:20px;
     margin-bottom: 16px;
 }
 

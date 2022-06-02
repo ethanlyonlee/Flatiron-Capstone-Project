@@ -19,6 +19,7 @@ function Comments({commentData, setCommentData, userId, addComment}) {
             );
           }
         });
+        window.confirm("Your comment has been deleted!")
       }
 
     const renderComments = commentData.map((comment) => <CommentItem comment={commentData} id={comment.id} content={comment.content} username={comment.user.username} game={comment.game.game_name} deleteComment={deleteComment} />)
@@ -29,7 +30,7 @@ function Comments({commentData, setCommentData, userId, addComment}) {
       <CommentNewForm userId={userId} addComment={addComment} setCommentData={setCommentData} comment={commentData.find((comment) => comment.id === parseInt(match.params.id))}/>
     </div>
     <div className="comment-item">
-      <h1 id="fans-voices">Fans' Voices</h1>
+      <h1 id="fans-voices">Fans' voices:</h1>
        {renderComments}
         {/* {commentData.map((comment) => <CommentItem comment={commentData} id={comment.id} content={comment.content} username={comment.user.username} game={comment.game.name} deleteComment={deleteComment} />)} */}
     </div>

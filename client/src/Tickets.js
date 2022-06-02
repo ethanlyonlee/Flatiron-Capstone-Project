@@ -24,7 +24,7 @@ function Tickets({user}){
         <div id='tickets-container'>
             {/* <h1 id='tickets-list-title'>Welcome to Ticket Center</h1> */}
             <div id='tickets-list'>
-                {games.length === 0 ? <h1 id="cart">Your cart is empty</h1> : renderTickets }
+                {games.length === 0 ? <h1 id="cart">Your cart is empty...</h1> : renderTickets }
             </div>
         </div>
     )

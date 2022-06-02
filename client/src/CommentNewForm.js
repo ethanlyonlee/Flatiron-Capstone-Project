@@ -7,7 +7,7 @@ function CommentNewForm({addComment, setCommentData, userId}) {
   const [game_id, setGame_Id] = useState();
   // const [formErrors, setFormErrors] = useState([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
         // e.preventDefault();
     addComment({
       content: content,
@@ -15,7 +15,7 @@ function CommentNewForm({addComment, setCommentData, userId}) {
       game_id: game_id
     })
     window.confirm("Thank you for your submission!")
-};
+  };
   
     return (
         <div className="comment-item">
@@ -33,7 +33,7 @@ function CommentNewForm({addComment, setCommentData, userId}) {
             value={game_id}
             onChange={(e) => setGame_Id(e.target.value)}
             >
-            <option value="">Select a Game</option>
+            <option value="">Select a Game </option>
             <option value= "1">Golden State Warriors @ Chicago Bulls</option>
             <option value= "2">Boston Celtics @ Golden State Warriors</option>
             <option value= "3">Miami Heat @ Boston Celtics</option>
@@ -43,7 +43,7 @@ function CommentNewForm({addComment, setCommentData, userId}) {
             </select>
         </div>
 
-        <div className="comment-item">
+        <div >
           <p>Comment:</p>
           <input
             type="text"
@@ -51,6 +51,7 @@ function CommentNewForm({addComment, setCommentData, userId}) {
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
+            required
           />
         </div>
 

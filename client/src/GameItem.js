@@ -24,7 +24,7 @@ function GameItem({game, user}){
     return(
         <div className="game-item">
             {/* <Link to={`/Teams/${team.id}`} className="home-game-team-link"><h1 className="team-name">{team.name}</h1></Link> */}
-            <p className="game_name">Game: {game_name}</p>
+            <p className="game_name">{game_name}</p>
             <br/>
             <p className="date_time">Date: {date_time}</p>
             <section className='location'><p className="location">Arena:</p><Link to={`/Locations/${location.id}`} className="home-game-location-link"><p className="location">{location.name}</p></Link><p className="location">- {location.city}, {location.state}</p></section>

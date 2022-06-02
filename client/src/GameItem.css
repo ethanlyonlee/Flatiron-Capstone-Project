@@ -80,15 +80,15 @@
 
 #buy-button {
     display: inline-block;
-    margin: 0 50px 0 50px;
-    height: 50%;
-    width: 150px;
-    background-color: rgb(4, 4, 105);
+    height: 30%;
+    width: 100px;
+    margin: 10px 20px 10px 20px;
+    background-color: rgb(4, 4, 105);;
     color:white;
     font-weight: 700;
-    text-decoration: none;
-    border-radius: 12px;
-    transition:0.4;
+    font-size: 15px;
+    border-radius: 20px;
+    transition:0.4 ;
 }
 
 #buy-button:hover {
@@ -108,7 +108,8 @@
 
 #cannot-buy-button {
     display: inline-block;
-    height: 50%;
+    height: 30%;
+    width: 100px;
     margin: 10px 20px 10px 20px;
     background-color: rgb(4, 4, 105);;
     color:white;
